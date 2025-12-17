@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt hàng - FlowerCorner.vn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="top-nav bg-light py-2 border-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="hotline-info">
+                        <span>HOTLINE: </span>
+                        <a href="tel:1900633045" class="text-danger fw-semibold text-decoration-none">1900 633 045</a>
+                        <span> | </span>
+                        <a href="tel:0865160360" class="text-danger fw-semibold text-decoration-none">0865 160 360</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="top-nav-links d-flex gap-4 justify-content-end">
+                        <a href="account.html" class="text-muted text-decoration-none d-flex align-items-center gap-1"><i class="bi bi-person"></i> Tài khoản <i class="bi bi-chevron-down"></i></a>
+                        <a href="cart.html" class="text-muted text-decoration-none d-flex align-items-center gap-1"><i class="bi bi-cart"></i> Giỏ hàng</a>
+                        <a href="checkout.html" class="text-muted text-decoration-none d-flex align-items-center gap-1"><i class="bi bi-credit-card"></i> Thanh toán</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="main-header py-3 bg-white border-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="social-links d-flex gap-3">
+                        <a href="#" class="text-muted text-decoration-none"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-muted text-decoration-none"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-muted text-decoration-none"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <a href="index.html" class="logo text-decoration-none">
+                        <h1 class="fs-3 fw-bold text-danger mb-0">FlowerCorner.vn</h1>
+                        <p class="text-muted mb-0 small">Shop hoa tươi</p>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <div class="header-actions d-flex align-items-center gap-3 justify-content-end flex-wrap">
+                        <button class="mobile-menu-toggle btn border-0 bg-transparent p-2" id="mobileMenuToggle">
+                            <i class="bi bi-list fs-4"></i>
+                        </button>
+                        <div class="search-box position-relative flex-grow-1" style="max-width: 300px;">
+                            <input type="text" placeholder="Tìm kiếm" class="form-control" id="searchInput">
+                            <button class="btn-search position-absolute end-0 top-50 translate-middle-y border-0 bg-transparent me-2"><i class="bi bi-search"></i></button>
+                        </div>
+                        <div class="cart-icon position-relative">
+                            <a href="cart.html" class="text-muted text-decoration-none"><i class="bi bi-cart3 fs-4"></i></a>
+                            <span class="cart-badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav bg-white border-bottom border-danger border-2">
+        <div class="container">
+            <ul class="nav-menu list-unstyled d-flex gap-4 py-3 mb-0 flex-wrap" id="navMenu">
+                <li><a href="index.html" class="text-dark text-decoration-none fw-medium">Trang chủ</a></li>
+                <li><a href="products.html" class="text-dark text-decoration-none fw-medium">Sản phẩm</a></li>
+                <li><a href="products.html?category=hoa-sinh-nhat" class="text-dark text-decoration-none fw-medium">Hoa sinh nhật</a></li>
+                
+                <li><a href="products.html?category=hoa-khai-truong" class="text-dark text-decoration-none fw-medium">Hoa khai trương</a></li>
+                <li><a href="products.html?category=hoa-cuoi" class="text-dark text-decoration-none fw-medium">Hoa cưới</a></li>
+                <li><a href="products.html?category=hoa-tang" class="text-dark text-decoration-none fw-medium">Hoa tang</a></li>
+                
+                <li><a href="products.html?category=son-tung-noel" class="text-dark text-decoration-none fw-medium">Sơn Tùng Noel</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hotline-banner bg-warning-subtle py-2 text-center">
+        <div class="container">
+            <p class="mb-0 text-warning-emphasis small">Hotline Đặt Hoa Nhanh - TP HCM: 1900 633 045 - Hà Nội: 094 200 7921</p>
+        </div>
+    </div>
+
+    <main class="main-content py-5">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="cart.html">Giỏ hàng</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Đặt hàng</li>
+                </ol>
+            </nav>
+
+            <h2 class="mb-4">Thông tin đặt hàng</h2>
+
+            <div id="emptyCartMessage" class="alert alert-warning" style="display: none;">
+                <i class="bi bi-exclamation-triangle"></i> Giỏ hàng của bạn đang trống. <a href="products.html">Tiếp tục mua sắm</a>
+            </div>
+
+            <div id="checkoutContent">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="card mb-4">
+                            <div class="card-header bg-light">
+                                <h5 class="mb-0"><i class="bi bi-person"></i> Thông tin khách hàng</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="checkoutForm">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="fullName" class="form-label">Họ và tên *</label>
+                                            <input type="text" class="form-control" id="fullName" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="phone" class="form-label">Số điện thoại *</label>
+                                            <input type="tel" class="form-control" id="phone" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email *</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="address" class="form-label">Địa chỉ giao hàng *</label>
+                                        <input type="text" class="form-control" id="address" required>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <label for="province" class="form-label">Tỉnh/Thành phố *</label>
+                                            <select class="form-select" id="province" required>
+                                                <option value="">Chọn tỉnh/thành phố</option>
+                                                <option value="hcm">TP. Hồ Chí Minh</option>
+                                                <option value="hn">Hà Nội</option>
+                                                <option value="dn">Đà Nẵng</option>
+                                                <option value="other">Khác</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label for="district" class="form-label">Quận/Huyện *</label>
+                                            <input type="text" class="form-control" id="district" required>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label for="ward" class="form-label">Phường/Xã *</label>
+                                            <input type="text" class="form-control" id="ward" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="note" class="form-label">Ghi chú</label>
+                                        <textarea class="form-control" id="note" rows="3" placeholder="Ghi chú thêm cho đơn hàng (tùy chọn)"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-header bg-light">
+                                <h5 class="mb-0"><i class="bi bi-credit-card"></i> Phương thức thanh toán</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="payment-methods">
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="paymentCash" value="cash" checked>
+                                        <label class="form-check-label" for="paymentCash">
+                                            <i class="bi bi-cash-coin"></i> Thanh toán khi nhận hàng (COD)
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="paymentBank" value="bank">
+                                        <label class="form-check-label" for="paymentBank">
+                                            <i class="bi bi-bank"></i> Chuyển khoản ngân hàng
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMomo" value="momo">
+                                        <label class="form-check-label" for="paymentMomo">
+                                            <i class="bi bi-wallet2"></i> Ví điện tử (MoMo, ZaloPay)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="paymentCard" value="card">
+                                        <label class="form-check-label" for="paymentCard">
+                                            <i class="bi bi-credit-card-2-front"></i> Thẻ tín dụng/Ghi nợ
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card mb-4">
+                            <div class="card-header bg-light">
+                                <h5 class="mb-0">Đơn hàng của bạn</h5>
+                            </div>
+                            <div class="card-body">
+                                <div id="orderItems" class="mb-3">
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Tạm tính:</span>
+                                    <span id="orderSubtotal">0 VND</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Phí vận chuyển:</span>
+                                    <span id="orderShipping">0 VND</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Giảm giá:</span>
+                                    <span class="text-success" id="orderDiscount">0 VND</span>
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between mb-3">
+                                    <strong>Tổng cộng:</strong>
+                                    <strong class="text-danger fs-5" id="orderTotal">0 VND</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <button class="btn btn-danger w-100 btn-lg" id="placeOrderBtn">
+                                    <i class="bi bi-check-circle"></i> Đặt hàng
+                                </button>
+                                <a href="cart.html" class="btn btn-outline-secondary w-100 mt-2">
+                                    <i class="bi bi-arrow-left"></i> Quay lại giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white fw-bold mb-3">shop hoa Flowercorner.vn</h5>
+                    <p class="mb-2 small">Hotline: 1900 633 045 - 0865 160 360<br>Email: sales@flowercorner.vn</p>
+                    <div class="app-download mt-4">
+                        <p class="fw-semibold mb-2">Tải ứng dụng ngay!</p>
+                        <a href="#" class="d-block mb-2"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='139' height='35'><rect fill='%23008aff' width='100%25' height='100%25'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='12' fill='white'>App%20Store</text></svg>" alt="App Store" class="img-fluid"></a>
+                        <a href="#" class="d-block"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='139' height='35'><rect fill='%2300c853' width='100%25' height='100%25'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='12' fill='white'>Google%20Play</text></svg>" alt="Google Play" class="img-fluid"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white fw-bold mb-3">CHĂM SÓC KHÁCH HÀNG</h5>
+                    <ul class="footer-links list-unstyled p-0">
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Giới thiệu</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Liên hệ</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Chính sách đổi trả</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Chính sách bảo mật</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Điều khoản sử dụng</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Hướng dẫn mua hàng</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Câu hỏi thường gặp</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Phương thức thanh toán</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Chính sách vận chuyển</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>FAQ</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5 class="text-white fw-bold mb-3">THEO DÕI</h5>
+                    <ul class="footer-links list-unstyled p-0">
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><i class="bi bi-facebook"></i> <span>Facebook</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><i class="bi bi-instagram"></i> <span>Instagram</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><i class="bi bi-youtube"></i> <span>YouTube</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><i class="bi bi-twitter"></i> <span>Twitter</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><i class="bi bi-pinterest"></i> <span>Pinterest</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3">SHOP HOA FLOWERCORNER</h5>
+                    <p class="mb-2 small"><strong>Cửa hàng chính:</strong><br>Địa chỉ cửa hàng chính</p>
+                    <p class="mb-2 small"><strong>Cửa Hàng TP.HCM:</strong><br>Địa chỉ cửa hàng TP.HCM</p>
+                    <p class="mb-2 small"><strong>Chi nhánh Hà Nội:</strong><br>Địa chỉ chi nhánh Hà Nội</p>
+                    <p class="mb-0 small">CÔNG TY TNHH FLOWER CORNER<br>Mã số thuế: 0319117387</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-contact-bar position-fixed bottom-0 start-0 end-0 bg-danger py-3 shadow z-3">
+        <div class="container">
+            <div class="contact-info d-flex justify-content-center align-items-center gap-4 flex-wrap">
+                <a href="tel:0918491941" class="contact-item text-white text-decoration-none d-flex align-items-center gap-2 fw-semibold">
+                    <i class="bi bi-telephone-fill"></i>
+                    <span>091 849 1941</span>
+                </a>
+                <a href="#" class="contact-item text-white text-decoration-none d-flex align-items-center gap-2 fw-semibold">
+                    <i class="bi bi-chat-dots-fill"></i>
+                    <span>Nhắn Tin Zalo</span>
+                </a>
+                <a href="tel:0865160860" class="contact-item text-white text-decoration-none d-flex align-items-center gap-2 fw-semibold">
+                    <i class="bi bi-telephone-fill"></i>
+                    <span>086516-0860</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-icons position-fixed end-0" style="bottom: 100px; z-index: 999;">
+        <div class="d-flex flex-column gap-3">
+            <a href="#" class="floating-icon messenger-icon rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none shadow" style="width: 50px; height: 50px; background-color: #0084ff;" title="Messenger">
+                <i class="bi bi-messenger fs-5"></i>
+            </a>
+            <a href="#" class="floating-icon zalo-icon rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none shadow" style="width: 50px; height: 50px; background-color: #0068ff;" title="Zalo">
+                <i class="bi bi-chat-dots fs-5"></i>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="data/products.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/checkout.js"></script>
+</body>
+</html>
+

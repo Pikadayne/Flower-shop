@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm - FlowerCorner.vn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="top-nav bg-light py-2 border-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="hotline-info">
+                        <span>HOTLINE: </span>
+                        <a href="tel:1900633045" class="text-danger fw-semibold text-decoration-none">1900 633 045</a>
+                        <span> | </span>
+                        <a href="tel:0865160360" class="text-danger fw-semibold text-decoration-none">0865 160 360</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="top-nav-links d-flex gap-4 justify-content-end">
+                        <a href="account.html" class="text-muted text-decoration-none d-flex align-items-center gap-1"><i class="bi bi-person"></i> Tài khoản <i class="bi bi-chevron-down"></i></a>
+                        <a href="cart.html" class="text-muted text-decoration-none d-flex align-items-center gap-1"><i class="bi bi-cart"></i> Giỏ hàng</a>
+                        <a href="checkout.html" class="text-muted text-decoration-none d-flex align-items-center gap-1"><i class="bi bi-credit-card"></i> Thanh toán</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="main-header py-3 bg-white border-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="social-links d-flex gap-3">
+                        <a href="#" class="text-muted text-decoration-none"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-muted text-decoration-none"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-muted text-decoration-none"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <a href="index.html" class="logo text-decoration-none">
+                        <h1 class="fs-3 fw-bold text-danger mb-0">FlowerCorner.vn</h1>
+                        <p class="text-muted mb-0 small">Shop hoa tươi</p>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <div class="header-actions d-flex align-items-center gap-3 justify-content-end flex-wrap">
+                        <button class="mobile-menu-toggle btn border-0 bg-transparent p-2" id="mobileMenuToggle">
+                            <i class="bi bi-list fs-4"></i>
+                        </button>
+                        <div class="search-box position-relative flex-grow-1" style="max-width: 300px;">
+                            <input type="text" placeholder="Tìm kiếm" class="form-control" id="searchInput">
+                            <button class="btn-search position-absolute end-0 top-50 translate-middle-y border-0 bg-transparent me-2"><i class="bi bi-search"></i></button>
+                        </div>
+                        <div class="cart-icon position-relative">
+                            <a href="cart.html" class="text-muted text-decoration-none"><i class="bi bi-cart3 fs-4"></i></a>
+                            <span class="cart-badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav bg-white border-bottom border-danger border-2">
+        <div class="container">
+            <ul class="nav-menu list-unstyled d-flex gap-4 py-3 mb-0 flex-wrap" id="navMenu">
+                <li><a href="index.html" class="text-dark text-decoration-none fw-medium">Trang chủ</a></li>
+                <li><a href="products.html" class="text-dark text-decoration-none fw-medium">Sản phẩm</a></li>
+                <li><a href="products.html?category=hoa-sinh-nhat" class="text-dark text-decoration-none fw-medium">Hoa sinh nhật</a></li>
+                
+                <li><a href="products.html?category=hoa-khai-truong" class="text-dark text-decoration-none fw-medium">Hoa khai trương</a></li>
+                <li><a href="products.html?category=hoa-cuoi" class="text-dark text-decoration-none fw-medium">Hoa cưới</a></li>
+                <li><a href="products.html?category=hoa-tang" class="text-dark text-decoration-none fw-medium">Hoa tang</a></li>
+                                    
+                <li><a href="products.html?category=son-tung-noel" class="text-dark text-decoration-none fw-medium">Sơn Tùng Noel</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hotline-banner bg-warning-subtle py-2 text-center">
+        <div class="container">
+            <p class="mb-0 text-warning-emphasis small">Hotline Đặt Hoa Nhanh - TP HCM: 1900 633 045 - Hà Nội: 094 200 7921</p>
+        </div>
+    </div>
+
+    <main class="main-content py-5">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="products.html">Sản phẩm</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" id="productBreadcrumb">Chi tiết sản phẩm</li>
+                </ol>
+            </nav>
+
+            <div class="row mb-5" id="productDetailContainer">
+                <div class="col-lg-6 mb-4">
+                    <div class="product-images">
+                        <div class="main-image mb-3">
+                            <img id="mainProductImage" src="" alt="Product" class="img-fluid rounded border" style="width: 100%; height: 500px; object-fit: cover;">
+                        </div>
+                        <div class="thumbnail-images d-flex gap-2" id="thumbnailImages">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="product-info-detail">
+                        <h1 class="product-title mb-3" id="productTitle"></h1>
+                        <div class="product-price-section mb-4">
+                            <span class="current-price fs-3 fw-bold text-danger" id="currentPrice"></span>
+                            <span class="old-price text-muted text-decoration-line-through ms-2" id="oldPrice"></span>
+                            <span class="discount-badge badge bg-danger ms-2" id="discountBadge"></span>
+                        </div>
+                        <div class="product-description mb-4">
+                            <h5 class="fw-semibold mb-3">Mô tả sản phẩm</h5>
+                            <p id="productDescription" class="text-muted"></p>
+                        </div>
+                        <div class="product-components mb-4">
+                            <h5 class="fw-semibold mb-3">Thành phần</h5>
+                            <ul id="productComponents" class="list-unstyled">
+                            </ul>
+                        </div>
+                        <div class="product-actions mb-4">
+                            <div class="quantity-selector d-flex align-items-center gap-3 mb-3">
+                                <label class="fw-medium">Số lượng:</label>
+                                <div class="input-group" style="width: 150px;">
+                                    <button class="btn btn-outline-secondary" type="button" id="decreaseQty">-</button>
+                                    <input type="number" class="form-control text-center" id="productQuantity" value="1" min="1">
+                                    <button class="btn btn-outline-secondary" type="button" id="increaseQty">+</button>
+                                </div>
+                            </div>
+                            <button class="btn btn-danger btn-lg w-100 mb-3" id="addToCartBtn">
+                                <i class="bi bi-cart-plus"></i> Thêm vào giỏ hàng
+                            </button>
+                            <button class="btn btn-outline-danger btn-lg w-100" id="buyNowBtn">
+                                <i class="bi bi-bag-check"></i> Mua ngay
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-tabs mb-5">
+                <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="info-tab" data-bs-toggle="tab" data-bs-target="#info" type="button" role="tab">Thông tin chi tiết</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab">Đánh giá (0)</button>
+                    </li>
+                </ul>
+                <div class="tab-content border border-top-0 p-4" id="productTabContent">
+                    <div class="tab-pane fade show active" id="info" role="tabpanel">
+                        <div id="productDetailInfo">
+                            <h5 class="fw-semibold mb-3">Thông tin sản phẩm</h5>
+                            <table class="table">
+                                <tbody id="productInfoTable">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="reviews" role="tabpanel">
+                        <div id="productReviews">
+                            <h5 class="fw-semibold mb-4">Đánh giá từ khách hàng</h5>
+                            <div id="reviewsList" class="mb-4">
+                                <p class="text-muted">Chưa có đánh giá nào. Hãy là người đầu tiên đánh giá sản phẩm này!</p>
+                            </div>
+                            <div class="review-form">
+                                <h6 class="fw-semibold mb-3">Viết đánh giá</h6>
+                                <form id="reviewForm">
+                                    <div class="mb-3">
+                                        <label class="form-label">Đánh giá của bạn *</label>
+                                        <div class="rating mb-2">
+                                            <input type="radio" name="rating" value="5" id="star5"><label for="star5" class="star">★</label>
+                                            <input type="radio" name="rating" value="4" id="star4"><label for="star4" class="star">★</label>
+                                            <input type="radio" name="rating" value="3" id="star3"><label for="star3" class="star">★</label>
+                                            <input type="radio" name="rating" value="2" id="star2"><label for="star2" class="star">★</label>
+                                            <input type="radio" name="rating" value="1" id="star1"><label for="star1" class="star">★</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="reviewName" class="form-label">Tên *</label>
+                                        <input type="text" class="form-control" id="reviewName" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="reviewEmail" class="form-label">Email *</label>
+                                        <input type="email" class="form-control" id="reviewEmail" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="reviewComment" class="form-label">Đánh giá của bạn *</label>
+                                        <textarea class="form-control" id="reviewComment" rows="4" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-danger">Gửi đánh giá</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="related-products">
+                <h3 class="section-title mb-4">Sản phẩm liên quan</h3>
+                <div class="row g-3" id="relatedProductsContainer">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white fw-bold mb-3">shop hoa Flowercorner.vn</h5>
+                    <p class="mb-2 small">Hotline: 1900 633 045 - 0865 160 360<br>Email: sales@flowercorner.vn</p>
+                    <div class="app-download mt-4">
+                        <p class="fw-semibold mb-2">Tải ứng dụng ngay!</p>
+                        <a href="#" class="d-block mb-2"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='139' height='35'><rect fill='%23008aff' width='100%25' height='100%25'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='12' fill='white'>App%20Store</text></svg>" alt="App Store" class="img-fluid"></a>
+                        <a href="#" class="d-block"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='139' height='35'><rect fill='%2300c853' width='100%25' height='100%25'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='12' fill='white'>Google%20Play</text></svg>" alt="Google Play" class="img-fluid"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white fw-bold mb-3">CHĂM SÓC KHÁCH HÀNG</h5>
+                    <ul class="footer-links list-unstyled p-0">
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Giới thiệu</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Liên hệ</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Chính sách đổi trả</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Chính sách bảo mật</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Điều khoản sử dụng</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Hướng dẫn mua hàng</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Câu hỏi thường gặp</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Phương thức thanh toán</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>Chính sách vận chuyển</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><span>FAQ</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5 class="text-white fw-bold mb-3">THEO DÕI</h5>
+                    <ul class="footer-links list-unstyled p-0">
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><i class="bi bi-facebook"></i> <span>Facebook</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><i class="bi bi-instagram"></i> <span>Instagram</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><i class="bi bi-youtube"></i> <span>YouTube</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><i class="bi bi-twitter"></i> <span>Twitter</span></a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none d-flex align-items-center gap-2"><i class="bi bi-pinterest"></i> <span>Pinterest</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3">SHOP HOA FLOWERCORNER</h5>
+                    <p class="mb-2 small"><strong>Cửa hàng chính:</strong><br>Địa chỉ cửa hàng chính</p>
+                    <p class="mb-2 small"><strong>Cửa Hàng TP.HCM:</strong><br>Địa chỉ cửa hàng TP.HCM</p>
+                    <p class="mb-2 small"><strong>Chi nhánh Hà Nội:</strong><br>Địa chỉ chi nhánh Hà Nội</p>
+                    <p class="mb-0 small">CÔNG TY TNHH FLOWER CORNER<br>Mã số thuế: 0319117387</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-contact-bar position-fixed bottom-0 start-0 end-0 bg-danger py-3 shadow z-3">
+        <div class="container">
+            <div class="contact-info d-flex justify-content-center align-items-center gap-4 flex-wrap">
+                <a href="tel:0918491941" class="contact-item text-white text-decoration-none d-flex align-items-center gap-2 fw-semibold">
+                    <i class="bi bi-telephone-fill"></i>
+                    <span>091 849 1941</span>
+                </a>
+                <a href="#" class="contact-item text-white text-decoration-none d-flex align-items-center gap-2 fw-semibold">
+                    <i class="bi bi-chat-dots-fill"></i>
+                    <span>Nhắn Tin Zalo</span>
+                </a>
+                <a href="tel:0865160860" class="contact-item text-white text-decoration-none d-flex align-items-center gap-2 fw-semibold">
+                    <i class="bi bi-telephone-fill"></i>
+                    <span>086516-0860</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-icons position-fixed end-0" style="bottom: 100px; z-index: 999;">
+        <div class="d-flex flex-column gap-3">
+            <a href="#" class="floating-icon messenger-icon rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none shadow" style="width: 50px; height: 50px; background-color: #0084ff;" title="Messenger">
+                <i class="bi bi-messenger fs-5"></i>
+            </a>
+            <a href="#" class="floating-icon zalo-icon rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none shadow" style="width: 50px; height: 50px; background-color: #0068ff;" title="Zalo">
+                <i class="bi bi-chat-dots fs-5"></i>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="data/products.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/product-detail.js"></script>
+</body>
+</html>
+
